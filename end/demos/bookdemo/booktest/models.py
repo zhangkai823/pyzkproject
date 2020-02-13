@@ -11,6 +11,9 @@ class Book(models.Model):
     pub_date = models.DateField(default="1983-06-01")
     price = models.FloatField(max_length=100,default=100)
 
+    def __str__(self):
+        return self.title
+
 
 class Hero(models.Model):
     """
