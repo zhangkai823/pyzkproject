@@ -13,8 +13,11 @@
         {{book.id}}--{{book.title}}--{{book.price}}
          </a>
          <a href="{% url 'booktest:delete' book.id %}">删除</a>
+         <a href="{% url 'booktest:editbook' book.id %}">修改书籍信息</a>
      </ul>
+
     {% endfor %}
+     <a href="{% url 'booktest:addbook' %}">增加书籍</a>
 
 
 </body>
