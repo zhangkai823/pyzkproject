@@ -12,7 +12,10 @@
          <a href="{% url 'booktest:detail' book.id %}">
         {{book.id}}--{{book.title}}--{{book.price}}
          </a>
+         <a href="{% url 'booktest:delete' book.id %}">删除</a>
      </ul>
     {% endfor %}
+
+
 </body>
 </html>
