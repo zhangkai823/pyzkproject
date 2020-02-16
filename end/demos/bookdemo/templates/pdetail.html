@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情页</title>
+</head>
+<body>
+<form action="#" method="post">
+        <h1>这里是投票界面</h1>
+        <h2>问题:{{title.name}}</h2>
+
+<h5>投票选项:</h5>
+        {% for a in title.alter.all %}
+        <ul>
+            <input type="radio" name="sex">
+            {{a.choice}}--投票统计{{a.num}}次
+        </ul>
+        <a href="{% url 'polls:result' a.id %}">提交</a>
+        {% endfor %}
+
+
+</form>
+<a href="{% url 'polls:pindex' %}">返回</a>
+</body>
+</html>

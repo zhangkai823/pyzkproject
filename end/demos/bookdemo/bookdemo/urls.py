@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # 使用path将booktest的路由进行包含
     # 匹配空 不需要booktest进行分流
-    path('',include('booktest.urls',namespace = 'booktest'))
+    path('',include('booktest.urls',namespace = 'booktest')),
+    path('polls/', include('polls.urls', namespace='polls')),
 
 ]

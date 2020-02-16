@@ -6,7 +6,7 @@ from django.contrib.admin import ModelAdmin
 
 # Register your models here.
 
-from .models import Book, Hero
+from .models import Book, Hero ,User
 
 # 定义关联类
 class HeroInline(admin.StackedInline):
@@ -49,3 +49,4 @@ class BookAdmin(ModelAdmin):
 
 admin.site.register(Book,BookAdmin)
 
+admin.site.register(User)
