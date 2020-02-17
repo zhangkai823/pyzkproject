@@ -8,10 +8,11 @@
 <div>
         <h1 style="font-size:50px">投票界面</h1>
         <img  style="width:150px" src="/static/img/tp.png" alt="">
-
+    <br>
+ 投票选项:
     {% for title in titles %}
     <ul>
-        投票选项:{{title.name}}
+       {{forloop.counter}}.{{title.name}}
         <a href="{% url 'polls:pdetails' title.id %}">进入投票</a>
 
     </ul>
