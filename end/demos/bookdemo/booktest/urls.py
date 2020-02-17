@@ -9,7 +9,7 @@ app_name = "booktest"
 urlpatterns = [
     # 以空开头 以空结尾  不需要打index 直接进入首页
     url(r'^$',views.index,name='index'),
-    url(r'detail/(\d+)/',views.detail,name='detail'),
+    url(r'detail/(?P<bookid>\d+)/',views.detail,name='detail'),
     url(r'^about/$',views.about,name='about'),
     url(r'^delete/(\d+)/$',views.detele,name='delete'),
     url(r'^deletehero/(\d+)/$',views.deletehero,name='deletehero'),

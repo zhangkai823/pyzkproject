@@ -22,9 +22,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hs&my$=x0=)l8&d!108ddg7$e$34q$j1uriub0%yueptdj*7i9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
+DEBUG = True
 ALLOWED_HOSTS = []
+
+# 页面需要访问404界面时需要配置的参数
+# DEBUG = False
+# ALLOWED_HOSTS = ['*', ]
+
+
 
 # Application definition
 
@@ -37,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls',
     'booktest',
+    'download',
 ]
 
 MIDDLEWARE = [
@@ -114,5 +121,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+
+# 静态资源
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR , 'static')]
+
+
+# 媒体资源配置
+MEDIA_URL ='/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIAFILES_DIRS = [os.path.join(BASE_DIR,'media')]

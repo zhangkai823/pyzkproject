@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
-
+from .settings import MEDIA_ROOT
+from django.views.static import serve
 # 路由 网址 每一个网址都需要绑定视图 视图函数给予页面返回
 # 每一个路由都需要绑定视图函数
 
@@ -28,5 +29,6 @@ urlpatterns = [
     # 匹配空 不需要booktest进行分流
     path('',include('booktest.urls',namespace = 'booktest')),
     path('polls/', include('polls.urls', namespace='polls')),
+    path('download/', include('download.urls',namespace='download')),
 
 ]
