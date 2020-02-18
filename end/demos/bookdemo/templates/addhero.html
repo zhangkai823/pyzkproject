@@ -8,6 +8,7 @@
     <div class="container">
             {# 向当前页面的路由发起post请求 #}
         <form action="#" method="post">
+            {% csrf_token %}
             英雄名字: <input type="text" name="heroname" placeholder="输入角色名">
             <br>
             英雄技能: <input type="text" name="herocontent" placeholder="输入技能">

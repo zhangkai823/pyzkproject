@@ -13,9 +13,12 @@ urlpatterns = [
     # 调用视图类 views.类名.as_view()  name 是解除硬编码所用的函数名
     # 解除硬编码 {% url 'polls:detail' 传递的参数 %}
     url(r'^pindex/$',views.IndexView.as_view(),name='pindex'),
-    # url(r'^pdetails/(\d)/$', views.pdetail, name='pdetails'),
+    url(r'^pdetails/(\d)/$', views.pdetail, name='pdetails'),
     url(r'^result/(\d)/$', views.result, name='result'),
     # 调用视图类
-    url(r'^pdetails/(\d)/$',views.DetailsView.as_view(),name='pdetails'),
+    # url(r'^pdetails/(\d)/$',views.DetailsView.as_view(),name='pdetails'),
+    url(r'^login/$',views.login,name='login'),
+    url(r'^regist/$', views.regist, name='regist'),
+    url(r'^logout/$', views.logout, name='logout'),
 
 ]
